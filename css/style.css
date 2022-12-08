@@ -1,1 +1,266 @@
 @charset "utf-8";
+.inner{
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* nav */
+.nav_inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.nav_icon{
+    color: #7a7f80;
+    width: 185px;
+    font-size: 40px;
+    text-align: center;
+}
+.contact{
+    color: #fff;
+    background: #689cc5;
+    font-size: 16px;
+    margin: 1em 1em;
+    align-items: right;
+}
+.contact:hover{
+    background-color: #333;
+}
+.hamburger{
+    width: 40px;
+    height: 32px;
+    position: relative;
+    display: none;
+}
+.hamburger_span{
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.hamburger_span:nth-child(1){
+    top: 0px;
+}
+.hamburger_span:nth-child(2){
+    top:  50%;
+    transform:  translateY(-50%);
+}
+.hamburger_span:nth-child(3){
+    top: 100%;
+    transform:  translateY(-100%)
+}
+
+/* keyvisual section */
+.keyvisual_inner{
+    background-image: url(../img/keyvisual/keyvisual.jpg);
+    background-size: cover;
+    padding: 400px 0;
+}
+.keyvisual > .inner > h1{
+    font-size: 65px;
+    font-weight: 400;
+    color: #90a6df;
+    margin-bottom: 30px;
+}
+.keyvisual > .inner > h2{
+    font-size: 40px;
+    font-weight: 100;
+    color: #fff;
+}
+
+/* work section */
+.work_inner{
+    background: #e2eff8;
+    padding: 50px 0;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.work > .inner > .flex > img{
+    width: 250px;
+}
+.work_text{
+    width: 730px;
+    text-align: center;
+}
+.work > .inner > .flex > .work_text > h3{
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin: 20px 0 35px 0;
+}
+.work > .inner > p{
+    font-size: 16px;
+}
+
+/* skills section */
+.skills{
+    text-align: center;
+    background: #fff;
+}
+.skills-inner{
+    background: #fff;
+    padding: 50px 0;
+}
+.skills > .skills-inner > h3{
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+}
+.skills-area{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+    gap: 100px;
+    justify-content: center;
+}
+.skills-area > img{
+    width: 200px;
+    height: 200px;
+    opacity: 0.7;
+}
+.skills-area > img:hover{
+    opacity: 1;
+}
+
+/* plan section */
+.plan{
+    background-color: #cfdde6;
+    padding: 50px 0;
+}
+.plan > h3{
+    font-size: 60px;
+}
+table{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+}
+table,td,th{
+    font-size: 16px;
+    border: white solid 1px;
+    padding: 15px 0;
+}
+table  thead{
+    background: #90a6df;
+}
+table tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+table tbody tr:nth-child(even){
+    background-color: #deebf7;
+}
+
+/* sns */
+.sns{
+    padding: 200px 0;
+    background: #e2eff8;
+}
+.icon{
+    width: 60%;
+    margin: 0 auto;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;;
+    text-align: center;
+}
+.icon > a{
+    color: #7a7f80;
+    width: 185px;
+    font-size: 40px;
+}
+.icon > a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* fotter */
+.footer_inner{
+    background: #cdd6dc;
+    padding: 5px 0;
+}
+.footer_text{
+    text-align: right;
+    margin: 0 100px;
+}
+@media screen and (max-width: 767px) {
+    /* ハンバーガーメニュー */
+    .hamburger{
+        display: block;
+    }
+    .hamburger_span{
+        display: block;
+    }
+    .hamburger_span:nth-child(1){
+        top: 0px;
+    }
+    .hamburger_span:nth-child(2){
+        top:  50%;
+        transform:  translateY(-50%);
+    }
+    .hamburger_span:nth-child(3){
+        top: 100%;
+        transform:  translateY(-100%)
+    }
+    .inner{
+        width: 97%;
+    } 
+    .contact{
+        display: none;
+    }
+
+    /* keyvisual */
+    .keyvisual_inner{
+        padding: 200px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .keyvisual > .inner > h1{
+        font-size: 40px;
+    }
+    .keyvisual > .inner > h2{
+        font-size: 30px;
+    }
+
+    /* work */
+    .flex{
+        display: block;
+    }
+    .work_text{
+        width: auto;
+    }
+
+    /* skills */
+    .skills-area{
+        grid-template-columns: 200px;
+        grid-template-rows: auto;
+        gap: 0;
+    }
+    .skills-area > img:nth-child(4n){
+        margin-top: 50px;
+    }
+
+    /* plan */
+    th{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    td{
+        font-size: 12px;
+    }
+
+    /* sns */
+    .sns{
+        padding: 50px 0;
+    }
+    .icon{
+        flex-direction: column;
+    }
+    .icon > a{
+        margin: 50px auto;
+    }
+}
